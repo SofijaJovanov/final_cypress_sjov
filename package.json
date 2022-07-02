@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "all:tests": "cypress run",
+    "report:allure": "allure generate allure-results --clean -o allure-report && allure open  allure-report",
+    "mpage:tests": "cypress run --spec cypress/e2e/main_page/main_page.cy.js --config video=false --env allure=true --reporter mocha-allure-reporter",
+    "test:allure": "npm run mpage:tests && npm report:allure"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.28.0",
+    "allure-commandline": "^2.17.2",
+    "cypress": "^10.1.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.1.0",
+    "mocha-allure-reporter": "^1.4.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/e2e",
+    "nonGlobalStepDefinitions": true
+  }
+}

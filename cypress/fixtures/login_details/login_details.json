@@ -1,0 +1,11 @@
+{
+  "customer": {
+    "username": "user@phptravels.com",
+    "password": "demouser"
+  },
+
+  "agent": {
+    "username": "agent@phptravels.com",
+    "password": "demoagent"
+  }
+}
