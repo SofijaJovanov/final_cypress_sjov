@@ -59,7 +59,7 @@ describe("Main page test set", function () {
     );
   });
 
-  it("3.Test profile information change", function () {
+  it.only("3.Test profile information change", function () {
     const user_name = "AlexFil";
     cy.get(button_selectors.MY_PROFILE).click();
     cy.get('[class="title"]').should("have.text", "Profile Information");

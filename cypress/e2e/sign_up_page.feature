@@ -9,6 +9,6 @@ Feature: Go to sign up page to create credentials for two customer users
         Then I successfully created two customer accounts
 
         Examples:
-            | fname   | lname      | phone     | email                      | password    |
-            | Penny   | Hofstadter | 021452569 | penny.hof@phptravels.com   | pennyh1user |
-            | Leonard | Hofstadter | 021889899 | leonard.hof@phptravels.com | leo2user    |
+            | fname   | lname      | phone     | email                        | password    |
+            | Penny   | Hofstadter | 021452569 | penny.hof56@phptravels.com   | pennyh1user |
+            | Leonard | Hofstadter | 021889899 | leonard.hof56@phptravels.com | leo2user    |

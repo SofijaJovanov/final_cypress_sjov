@@ -4,11 +4,15 @@ const cucumber = require("cypress-cucumber-preprocessor").default;
 const AllureWriter = require("@shelex/cypress-allure-plugin/writer");
 
 module.exports = defineConfig({
+  reporter: "cypress-mochawesome-reporter",
+
   e2e: {
     setupNodeEvents(on, config) {
+      require("cypress-mochawesome-reporter/plugin")(on);
       on("file:preprocessor", cucumber());
+
       AllureWriter(on, config);
-            return config;
+      return config;
     },
 
     baseUrl: "https://www.phptravels.net/login",
